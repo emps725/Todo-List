@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/style.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            user-select: none;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #7B7B7B;
+        }
+
+        .task-text {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white p-6 rounded-lg  w-full max-w-96">
+        <h2 class="text-2xl font-bold mb-4 text-left">Your To-Do</h2>
+
+        <!-- Input Section -->
+        <div class="flex gap-2 mb-4">
+            <input id="todoadd" type="text" placeholder="Add new task"
+                class="flex-grow border-b border-[#C5C5C5] px-2 py-2 focus:outline-none" />
+            <button id="addbtn"
+                class="bg-[#505050] text-white px-3 py-2 rounded-xl hover:bg-[#6b6b6b] transition">✛</button>
+        </div>
+
+        <!-- To-Do List Placeholder -->
+        <ul id="todolist" class="cursor-pointer space-y-2">
+            <!-- <li class="flex items-center justify-between border border-[#C5C5C5] rounded-xl px-3 py-2">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" checked />
+                    <span class="task-text line-through text-gray-500">This is an example task</span>
+                </div>
+                <button class="hover:font-bold transition">✕</button>
+            </li> -->
+            <!-- <li class="flex items-center justify-between border border-[#C5C5C5] rounded-xl px-3 py-2">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" />
+                    <span>Another pending task</span>
+                </div>
+                <button class="text-black hover:font-bold transition">✕</button>
+            </li> -->
+        </ul>
+
+        <!-- Footer -->
+        <p id="remains" class="text-sm text-gray-600 mt-4">Your remaining todos: 0</p>
+        <p class="text-xs italic text-gray-500 mt-2">
+            "Doing what you love is the cornerstone of having abundance in your life." – Wayne Dyer
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
